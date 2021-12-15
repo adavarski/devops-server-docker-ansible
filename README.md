@@ -1,6 +1,6 @@
 ## GitLab devops server docker-ansible repo (to build ansible docker images for GitLab CI/CD pipelines)
 
-### Notes : GitLab devops server use self-signet certificates, so some hacks/workorounds
+### Notes : GitLab devops server use self-signed certificate, so some hacks/workorounds
 
 ```
 GitLab CI/CD pipeline (--skip-tls-verify):
@@ -11,4 +11,5 @@ Docker daemon devops server setup:
 
 root@devops:~/.ssh# cat /etc/docker/daemon.json 
 { "insecure-registries" : ["gitlab.devops.davar.com:2053"] }
+
 ```
